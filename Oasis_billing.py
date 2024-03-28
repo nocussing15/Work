@@ -6,8 +6,8 @@ import holidays
 
 def main():
     #define your main data frame
-    df=pd.read_csv(r'C:\Users\pnguy1\Desktop\Python Programs\Reservation_Summaries\reservation_Summary_FEB.csv')
-    df_billing = pd.read_csv(r'C:\Users\pnguy1\Desktop\Python Programs\Billing Schedule\BillingSchedule_02_3_2024.csv')
+    df=pd.read_csv(r'YOUR FILEPATH TO YOUR RESERVATION CSV') #RESERVATION SUMMARY CSV
+    df_billing = pd.read_csv(r'YOUR FILEPATH TO YOUR BILLING SCHEUDLE CSV') #BILLINGSCHEDULE COMPLETED CSV
     company = input('Choose which Company\n')
     #create dataframe per company
     df_company = company_df(df,company)
@@ -348,14 +348,14 @@ def ancillary(dataframe_res,dataframe_bill,company): #note the ancillary will ne
 #POWER LOSSES = LMP * %PATHLOSS * TOTAL MW
 #def power_losses(company):
     #we are gonna have to import in the path losses
- #   df_path_losses= pd.read_xml(r"C:\Users\pnguy1\Desktop\Python Programs\OASIS_PathLossPercentage.xml") #path losses xml file
+ #   df_path_losses= pd.read_xml(r"YOUR PATH TO XML LOSSES FILE") #path losses xml file
   #  df_path_losses=df_path_losses.drop(columns=["Identity"]) #drop identity column 
    # df_path_losses=df_path_losses.drop(0) #drop first row 
     #import LMP FINAL FOR MONTH or CAISO_LAP_RE
-    #df_LMP=pd.read_csv(r"C:\Users\pnguy1\Desktop\Python Programs\LAP_Prices\CAISO_LAP_RE\20231201_20231231_PRC_RTM_LAP_RTM_20240125_13_54_05_v6.csv") #path to caiso_lap_re_csv
+    #df_LMP=pd.read_csv(r"YOUR PATH TO SP_15 LMP CSV OR CAISO LMP PRICES") #path to caiso_lap_re_csv
 
     #import Billing_Schedule csv for the month
-    #df_bill_sched = pd.read_csv(r"C:\Users\pnguy1\Desktop\Python Programs\Billing Schedule\BillingSchedule_01_4_2024.csv")#pull billing schedule csv for month, after validated 
+    #df_bill_sched = pd.read_csv(r"PATH TO BILLING SCHEDU")#pull billing schedule csv for month, after validated 
     #df_bill_sched.reset_index(inplace=True) #reset index
 
 
